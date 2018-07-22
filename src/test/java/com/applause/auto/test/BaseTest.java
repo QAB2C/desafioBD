@@ -15,13 +15,13 @@ import com.applause.auto.framework.pageframework.util.logger.LogController;
 import com.applause.auto.framework.pageframework.util.queryhelpers.WebElementQueryHelper;
 import com.applause.auto.framework.pageframework.util.synchronization.WebSyncHelper;
 import com.applause.auto.framework.pageframework.web.PageFactory;
-import com.applause.auto.pageframework.helpers.TemplateTestHelper;
+import com.applause.auto.framework.test.listeners.TestListener;
+import com.applause.auto.pageframework.helpers.BestDayTestHelper;
 import com.applause.auto.pageframework.pages.LandingPage;
 import com.applause.auto.pageframework.testdata.CustomerConfig;
 import com.applause.auto.pageframework.testdata.TestConstants.TestData;
-import com.applause.auto.pageframework.testrail.TemplateWebTestListener;
 
-@Listeners(TemplateWebTestListener.class)
+@Listeners(TestListener.class)
 public class BaseTest {
 
 	protected static final LogController LOGGER;
@@ -34,7 +34,7 @@ public class BaseTest {
 	protected static WebSyncHelper syncHelper;
 	protected static WebElementQueryHelper queryHelper;
 	protected static EnvironmentUtil env;
-	protected TemplateTestHelper templateTestHelper;
+	protected BestDayTestHelper templateTestHelper;
 
 	static {
 		config = new CustomerConfig();
@@ -55,7 +55,7 @@ public class BaseTest {
 		syncHelper = (WebSyncHelper) driverWrapper.getSyncHelper();
 		queryHelper = (WebElementQueryHelper) driverWrapper.getQueryHelper();
 
-		templateTestHelper = new TemplateTestHelper();
+		templateTestHelper = new BestDayTestHelper();
 
 		// Maximize the browser for desktop platforms
 		if (!env.getIsMobileWebTest()) {

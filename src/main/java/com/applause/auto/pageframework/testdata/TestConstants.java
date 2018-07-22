@@ -9,6 +9,7 @@ public class TestConstants {
 
 		public static final String DEBUG = "debug";
 		public static final String LOGIN = "login";
+		public static final String HOTEL_SEARCH = "hotel_search";
 	}
 
 	/**
@@ -16,7 +17,9 @@ public class TestConstants {
 	 */
 	public static final class TestData {
 
-		public static final String LANDING_PAGE_URL = "http://ionic-conference.s3-website-us-east-1.amazonaws.com/";
+		public static final String LANDING_PAGE_URL = "https://www.bestday.com/";
+
+		public static final String DESTINATION = "Cancun";
 
 		public static final String USERNAME = "test";
 		public static final String PASSWORD = "test";
