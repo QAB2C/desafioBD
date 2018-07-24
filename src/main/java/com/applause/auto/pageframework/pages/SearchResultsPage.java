@@ -19,6 +19,8 @@ public class SearchResultsPage extends AbstractPage {
 
 	@Override
 	protected void waitUntilVisible() {
+		// If we query for this element immediately the page doesn't load so we
+		// need a short wait
 		syncHelper.suspend(1000);
 		syncHelper.waitForElementToAppear(getSearchResultsSummary());
 	}
@@ -27,6 +29,11 @@ public class SearchResultsPage extends AbstractPage {
 	 * Public Actions
 	 */
 
+	/**
+	 * Get the text from the search results summary for verification
+	 * 
+	 * @return the text from the search results summary
+	 */
 	public String getSearchResultsSummaryText() {
 		return getSearchResultsSummary().getText();
 	}

@@ -33,6 +33,12 @@ public abstract class LandingPage extends AbstractPage {
 	 * Public Actions
 	 */
 
+	/**
+	 * Enter a string destination city and then select the first result fron the
+	 * dropdown once it appears
+	 * 
+	 * @param destinationName
+	 */
 	public void enterDestinationAndConfirm(String destinationName) {
 		LOGGER.info(String.format("Entering destination %s into search field", destinationName));
 		getDestinationTextBox().setText(destinationName);

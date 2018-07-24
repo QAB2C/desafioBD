@@ -13,7 +13,7 @@ public class HotelSearchTests extends BaseTest {
 	private LandingPage landingPage;
 	private SearchResultsPage searchResultsPage;
 
-	@Test(groups = { TestNGGroups.HOTEL_SEARCH }, description = "3589")
+	@Test(groups = { TestNGGroups.HOTEL_SEARCH }, description = "9483")
 	public void testSearchForCancunHotel() {
 
 		LOGGER.info("1. Navigate to landing page");
@@ -29,5 +29,7 @@ public class HotelSearchTests extends BaseTest {
 		searchResultsPage = landingPage.tapSearchButton();
 
 		Assert.assertTrue(searchResultsPage.getSearchResultsSummaryText().contains("Options match your search"));
+
+		// Click first search result and make sure that we are able to book it
 	}
 }
