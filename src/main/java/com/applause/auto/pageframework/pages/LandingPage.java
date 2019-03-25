@@ -81,12 +81,12 @@ public abstract class LandingPage extends AbstractPage {
 		return new Button(this, getLocator(this, "getSearchButton"));
 	}
 
-	@WebElementLocator(webDesktop = "#spanBienvenido")
+	@WebElementLocator(webDesktop = "#account-lightbox")
 	protected Text getPopupWelcomeText() {
 		return new Text(this, getLocator(this, "getPopupWelcomeText"));
 	}
 
-	@WebElementLocator(webDesktop = "#id-icon-header-login-close")
+	@WebElementLocator(webDesktop = "#d-icon-header-login-close")
 	protected Button getDismissPopupButton() {
 		return new Button(this, getLocator(this, "getDismissPopupButton"));
 	}

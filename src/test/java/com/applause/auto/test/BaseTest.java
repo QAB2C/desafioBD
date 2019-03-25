@@ -50,6 +50,8 @@ public class BaseTest {
 		String runId = String.format("%s:%s", method.getName(), System.currentTimeMillis());
 		LOGGER.debug(String.format("Setting runId to %s", runId));
 		System.setProperty("runId", runId);
+//		System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver");
+
 		driverWrapper = new DriverWrapper(EnvironmentUtil.getDriver(), env.getDriverProvider());
 		driver = (WebDriver) driverWrapper.getDriver();
 		syncHelper = (WebSyncHelper) driverWrapper.getSyncHelper();
