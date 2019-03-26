@@ -28,7 +28,7 @@ public class HotelSearchTests extends BaseTest {
 		LOGGER.info("Click Search and expect to land at Search Results page");
 		searchResultsPage = landingPage.tapSearchButton();
 
-		Assert.assertTrue(searchResultsPage.getSearchResultsSummaryText().contains("Options match your search"));
+		Assert.assertTrue(searchResultsPage.getSearchResultsSummaryText().contains("concuerdan con tu búsqueda"));
 
 		// Click first search result and make sure that we are able to book it
 	}

@@ -17,7 +17,7 @@ public class TestConstants {
 	 */
 	public static final class TestData {
 
-		public static final String LANDING_PAGE_URL = "https://www.bestday.com/";
+		public static final String LANDING_PAGE_URL = "https://www.bestday.com.mx/";
 
 		public static final String DESTINATION = "Cancun";
 
