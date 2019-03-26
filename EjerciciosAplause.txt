@@ -1,0 +1,138 @@
+Ejercicio 1
+public class DesafioN3 {
+
+	public static void main(String[] args) {
+		
+				
+		for(int i=1; i<=50; i++){
+			
+			if (i%3==0 & i%5==0) {
+				System.out.println("BestDay "+i);
+				
+			}
+			
+			else if (i%3==0 ) {
+				System.out.println("Best "+i);
+				
+			}
+			
+			else if (i%5==0) {
+				System.out.println("Day "+i);
+				
+			}
+			
+			else System.out.println(i);
+			
+		}
+
+	}
+
+}
+
+
+Ejercicio 2
+public class DesafioN3dos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int a = 7;
+		int b = 3;
+		
+		
+		a=a-b;
+		b=a+b;
+		a=b-a;
+		
+		
+	  
+	  System.out.println("El valor de A es " + a);
+	  System.out.println("El valor de B es " + b);
+	  
+	}
+
+}
+
+
+Ejercicio 3
+public class DesafioN3tres {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int a = 0;
+		int b = 1;
+		int c ;
+		
+		
+		for(int i =0; i<=10; i++) {
+			
+	       c =a+b;
+	       a=b;
+	       b=c;
+	       
+	       
+			System.out.println(c);
+			
+		}
+			
+			
+			
+		}
+		
+		
+	}
+
+	
+Ejercicio 4
+public class DesafioN3cuatro {
+
+	public static void main(String[] args) {
+		
+		int tamano =10;
+		
+		for(int x=0; x<tamano; x++) {
+			
+			
+			for(int y=0; y<tamano; y++) {
+			
+					if(y==0)
+						System.out.print("X ");	
+				
+					
+					else if(x==0 & y>0)
+						System.out.print("X ");	
+			
+					else if(x==tamano -1 & y>0)
+						System.out.print("X ");	
+					
+					else if(y==tamano -1 & (x>0 & x<tamano-1))
+						System.out.print("X ");	
+					
+					else if(x>0 & x<tamano-1 & y==x)
+						System.out.print("X ");
+					
+					else if(x+y==tamano -1)
+						System.out.print("X ");
+						
+					
+					else System.out.print("O ");		
+				
+				}
+			
+			
+			    System.out.println("");
+		
+			}
+			
+			
+			
+		}
+		
+		
+		
+
+	}
+
+
