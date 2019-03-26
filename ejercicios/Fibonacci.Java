@@ -1,0 +1,55 @@
+public class Fibonacci {
+
+
+ 
+
+
+ 
+   public static void main(String[] args) {
+
+    
+    // TODO Auto-generated method stub
+
+        
+
+  
+	      int num=1;
+
+ 
+              int num2=0;
+
+   
+
+     
+
+        for(int i=0; i < num; i++ ) {
+
+   
+         num2 = num + num2;
+
+          
+         num = num2 + num;
+
+      
+
+         System.out.println(num2);
+
+     
+         System.out.println(num);
+
+     
+  	 }
+
+
+
+ 
+
+
+    }
+
+
+ 
+
+
+
+}
