@@ -6,7 +6,9 @@ public class Desafio4 {
 		int a = 3;
 		int b = 7;
 
-		a = b = a;
+		a = b;
+		b = a - 4;
+
 		System.out.println("El valor de A es:  " + a);
 
 		System.out.println("El valor de B es:   " + b);
