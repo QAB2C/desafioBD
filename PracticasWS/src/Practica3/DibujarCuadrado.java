@@ -1,8 +1,7 @@
 package Practica3;
-
 import java.util.Scanner;
 
-public class Desafio6 {
+public class DibujarCuadrado {
 
 	private Scanner leer;
 
@@ -29,7 +28,7 @@ public class Desafio6 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Desafio6 c = new Desafio6();
+		DibujarCuadrado c = new DibujarCuadrado();
 		c.Dibujar();
 	}
 

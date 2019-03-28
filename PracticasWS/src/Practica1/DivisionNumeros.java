@@ -1,6 +1,6 @@
 package Practica1;
 
-public class Desafio3 {
+public class DivisionNumeros {
 
 	public void ciclo() {
 		int numero = 50;
@@ -21,7 +21,7 @@ public class Desafio3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Desafio3 p = new Desafio3();
+		DivisionNumeros p = new DivisionNumeros();
 		p.ciclo();
 
 	}

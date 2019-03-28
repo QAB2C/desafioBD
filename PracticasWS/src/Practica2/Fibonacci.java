@@ -1,9 +1,6 @@
 package Practica2;
 
-//Crear un clico que imprima los primeros 10 numeros de la serie de fibonacci
-// La sucesión de fibonacci se realiza sumando siempre los últimos 2 números
-
-public class Desafio5 {
+public class Fibonacci {
 
 	public int seriefibonacci(int tamaño) {
 		int serie = 0, numero1 = 0, numero2 = 1;
@@ -19,7 +16,7 @@ public class Desafio5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Desafio5 f = new Desafio5();
+		Fibonacci f = new Fibonacci();
 		f.seriefibonacci(10);
 	}
 
