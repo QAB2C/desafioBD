@@ -109,7 +109,7 @@ public abstract class GplanPage extends AbstractPage {
 		return new EditField(this, getLocator(this, "SearchDestinationTextBox"));
 	}
 
-	@WebElementLocator(webDesktop = "//li[@class='ui-menu-item'][5]/a[@id='ui-active-menuitem']")
+	@WebElementLocator(webDesktop = "//li[@class='ui-menu-item'][1]/a[@id='ui-active-menuitem']")
 	protected EditField selectDestinationTextBox() {
 		return new EditField(this, getLocator(this, "SelectDestinationTextBox"));
 	}

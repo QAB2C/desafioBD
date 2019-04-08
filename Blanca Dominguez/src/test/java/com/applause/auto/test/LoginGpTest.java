@@ -18,7 +18,6 @@ public class LoginGpTest extends BaseTest {
 		LOGGER.info("1. Navigate to landing page");
 		landingPage = navigateToGplanPage();
 
-		// Assertions
 		LOGGER.info(String.format("2. Enter %s into User Name", TestConstants.TestData.USERNAME));
 		landingPage.userName(TestConstants.TestData.USERNAME);
 
@@ -34,7 +33,8 @@ public class LoginGpTest extends BaseTest {
 		LOGGER.info(String.format("6. Enter %s into Destination", TestConstants.TestData.DESTINATION));
 		landingPage.enterDestination(TestConstants.TestData.DESTINATION);
 
-		LOGGER.info("7. Click Destinat landingPage.tapClickDestination();ion ");
+		LOGGER.info("7. Click Destination ");
+		landingPage.tapClickDestination();
 
 		LOGGER.info("8. Click search Button");
 		landingPage.clickSearchHotel();
