@@ -65,12 +65,6 @@ public class LoginChunk extends AbstractPage {
 		LOGGER.info("Validating Password");
 		return getUserPassError().exists();
 	}
-	
-	public MenuChunk menuRvbi() {
-		LOGGER.info("HomePage");
-		return PageFactory.create(MenuChunk.class);
-	}
-
 	/*
 	 * Protected Getters
 	 */

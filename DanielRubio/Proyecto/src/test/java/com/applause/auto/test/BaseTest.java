@@ -17,6 +17,7 @@ import com.applause.auto.framework.pageframework.util.synchronization.WebSyncHel
 import com.applause.auto.framework.pageframework.web.PageFactory;
 import com.applause.auto.framework.test.listeners.TestListener;
 import com.applause.auto.pageframework.Chunks.LoginChunk;
+import com.applause.auto.pageframework.pages.HomePage;
 import com.applause.auto.pageframework.testdata.CustomerConfig;
 import com.applause.auto.pageframework.testdata.TestConstants.TestData;
 
@@ -79,5 +80,9 @@ public class BaseTest {
 	protected LoginChunk loginToRvbiPage() {
 		driver.navigate().to(TestData.RVBI_PAGE_URL);
 		return PageFactory.create(LoginChunk.class);
+	}
+
+	protected HomePage homePageRvbi() {
+		return PageFactory.create(HomePage.class);
 	}
 }
