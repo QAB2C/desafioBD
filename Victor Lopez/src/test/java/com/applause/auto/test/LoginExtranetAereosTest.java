@@ -2,6 +2,7 @@ package com.applause.auto.test;
 
 import com.applause.auto.pageframework.pages.ExtranetAereosPage;
 import com.applause.auto.pageframework.pages.StatusBlockingsPage;
+import com.applause.auto.pageframework.pages.BlockingPage;
 import com.applause.auto.pageframework.testdata.TestConstants;
 import com.applause.auto.pageframework.testdata.TestConstants.TestNGGroups;
 import org.testng.Assert;
@@ -10,11 +11,12 @@ import org.testng.annotations.Test;
 public class LoginExtranetAereosTest extends BaseTest {
 
     private ExtranetAereosPage ExtranetAereosPage;
-
     private StatusBlockingsPage StatusBlockingsPage;
+    private BlockingPage BlockingPage;
 
-    @Test(groups = { TestNGGroups.FLIGHT_SEARCH }, description = "TBT")
+    @Test(groups = {TestNGGroups.FLIGHT_SEARCH}, description = "TBT")
     public void testLogin() {
+
         LOGGER.info("1. Navigate to Extranet Flights ");
         ExtranetAereosPage = navigateToExtranetAereosPage();
 
@@ -34,6 +36,10 @@ public class LoginExtranetAereosTest extends BaseTest {
         StatusBlockingsPage = ExtranetAereosPage.LogingEnterButton();
 
         Assert.assertNotNull(StatusBlockingsPage, "Failed to navigate to the Status Blockings page.");
+
+        LOGGER.info("6.Click and expect to Enter at Blocking page");
+        BlockingPage = ExtranetAereosPage.getPageBlocking();
+        Assert.assertNotNull(BlockingPage, "Failed to navigate to the Status Blockings page.");
 
 
     }

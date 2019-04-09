@@ -50,8 +50,11 @@ public abstract class ExtranetAereosPage extends AbstractPage {
 		return PageFactory.create(StatusBlockingsPage.class);
 	}
 
-
-
+	public BlockingPage getPageBlocking() {
+		getLinkBlocking().click();
+		LOGGER.info("Tap on  Blocking Link");
+		return PageFactory.create(BlockingPage.class);
+	}
 
 
 	@WebElementLocator(webDesktop = "input[name='Email']")
@@ -73,6 +76,14 @@ public abstract class ExtranetAereosPage extends AbstractPage {
 	protected Button getLoginButton() {
 		return new Button(this, getLocator(this, "getLoginButton"));
 	}
+
+
+	@WebElementLocator(webDesktop = "#Blocking")
+	protected Link getLinkBlocking() {
+		return new Link(this, getLocator(this, "getLinkBlocking"));
+	}
+
+
 
 
 
