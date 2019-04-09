@@ -17,11 +17,12 @@ public class TestConstants {
 	 */
 	public static final class TestData {
 
-		public static final String LANDING_PAGE_URL = "https://www.bestday.com.mx/";
+		public static final String AURORA_LANDING_PAGE_URL = "https://newportal.hoteldo.com";
+		public static final String Skyscanner_LANDING_PAGE_URL = "https://www.espanol.skyscanner.com/";
 
 		public static final String DESTINATION = "Cancun";
 
-		public static final String USERNAME = "test";
-		public static final String PASSWORD = "test";
+		public static final String USERNAME = "9006111";
+		public static final String PASSWORD = "Temporal1*";
 	}
 }
