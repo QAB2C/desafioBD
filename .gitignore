@@ -1,0 +1,16 @@
+.classpath
+.project
+.settings/
+target/
+.DS_Store
+test-output/
+*.iml
+.idea/
+doc/
+jobs/
+*.zip
+*-results.xml
+*.log
+*.txt
+*-all.xml
+*.md
