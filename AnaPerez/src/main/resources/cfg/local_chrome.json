@@ -1,0 +1,17 @@
+{
+        "deviceType" : "localweb",
+        "deviceClass" : "chrome",
+        "manufacturer":"Windows",
+        "osVersion" : "10",
+        "os" : "Win10",
+        "deviceName" : "OSX.Chrome",
+        "factoryConfigKey" : "WEBDESKTOP",
+        "driverProvider" : "LOCAL_WEB",
+        "hubUrl" : "local",
+        "caps" : {
+            "browserName" : "chrome",
+            "acceptSSLAlerts" : "true"
+            
+        }
+        
+}
