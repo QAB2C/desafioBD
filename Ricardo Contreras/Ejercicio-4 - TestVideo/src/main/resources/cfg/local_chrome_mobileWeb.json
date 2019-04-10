@@ -1,0 +1,20 @@
+{
+        "deviceType" : "localweb",
+        "deviceClass" : "chrome",
+        "manufacturer":"Microsoft Windows",
+        "osVersion" : "10.0.17134.590",
+        "os" : "Windows",
+        "deviceName" : "Chrome",
+        "factoryConfigKey" : "WEBDESKTOP",
+        "driverProvider" : "LOCAL_WEB",
+        "hubUrl" : "local",
+        "caps" : {
+                "browserName" : "chrome",
+                "acceptSSLAlerts" : "true",
+                "chromeOptions": {
+                        "mobileEmulation": {
+                                "deviceName":"Pixel 2"
+                        }
+                }
+        }
+}
