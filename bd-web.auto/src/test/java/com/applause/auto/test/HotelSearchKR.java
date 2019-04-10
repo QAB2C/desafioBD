@@ -18,7 +18,7 @@ public class HotelSearchKR extends BaseTest {
 	private RoomListKR roomListKR;
 	private CancellationPoliciesKRChunk cancellationPoliciesKRChunk;
 
-	@Test(groups = { TestNGGroups.HOTEL_SEARCH }, description = "9483")
+	@Test(groups = { TestNGGroups.HOTEL_SEARCH_KR }, description = "9483")
 	public void testShowCancellationPolicies() {
 
 		LOGGER.info("1. Navigate to Search Box");

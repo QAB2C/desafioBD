@@ -11,15 +11,18 @@ public class TestConstants {
 
 		public static final String DEBUG = "debug";
 		public static final String LOGIN = "login";
-		public static final String HOTEL_SEARCH = "hotel_search_kr";
+		public static final String HOTEL_SEARCH_KR = "skyscanner";
 	}
 
 	/**
 	 * Test Data for tests
 	 */
+
 	public static final class TestData {
 
 		public static final String HOTELLIST_URL_K = "https://www.e-tsw.com/hoteles/busqueda?af=af-tvic";
+
+		public static final String RANDOMPAGE = "https://edition.cnn.com/videos";
 
 		public static final String DESTINATION = "Veracruz";
 

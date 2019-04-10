@@ -18,6 +18,7 @@ import com.applause.auto.framework.pageframework.web.PageFactory;
 import com.applause.auto.framework.test.listeners.TestListener;
 import com.applause.auto.pageframework.helpers.KRHelper;
 import com.applause.auto.pageframework.pages.SearchBoxKR;
+import com.applause.auto.pageframework.pages.TestSky;
 import com.applause.auto.pageframework.testdata.CustomerConfig;
 import com.applause.auto.pageframework.testdata.TestConstants.TestData;
 
@@ -83,8 +84,14 @@ public class BaseTest {
 	 */
 
 	protected SearchBoxKR navigateToSearchBoxKR() {
-		LOGGER.info(String.format("Navigating to the landing page '%s'", TestData.HOTELLIST_URL_K));
+		LOGGER.info(String.format("Navigating to the search box '%s'", TestData.HOTELLIST_URL_K));
 		driver.navigate().to(TestData.HOTELLIST_URL_K);
 		return PageFactory.create(SearchBoxKR.class);
+	}
+
+	protected TestSky navigateToSkyTest() {
+		LOGGER.info(String.format("Navigating to the CNN video page '%s'", TestData.RANDOMPAGE));
+		driver.navigate().to(TestData.RANDOMPAGE);
+		return PageFactory.create(TestSky.class);
 	}
 }

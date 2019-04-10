@@ -4,7 +4,7 @@
 	<test name="login" preserve-order="true">
 		<groups>
 			<run>
-				<include name="hotel_search_kr"/>
+				<include name="Hotel_Search_KR"/>
 			</run>
 		</groups>
 		<packages>

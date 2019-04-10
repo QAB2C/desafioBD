@@ -104,7 +104,6 @@ public class HotelListKR extends AbstractPage {
  * Desktop Implementation for LandingPage
  */
 class DesktopHotelListKR extends HotelListKR {
-
 }
 
 /**
@@ -117,5 +116,4 @@ class TabletHotelListKR extends HotelListKR {
  * Phone Implementation for LandingPage
  */
 class PhoneHotelListKR extends HotelListKR {
-
 }

@@ -7,6 +7,7 @@ import java.util.Locale;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class KRHelper {
 
@@ -19,6 +20,11 @@ public class KRHelper {
 	public static void VerticalScroll(WebDriver driver, int Ylocation) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0," + Ylocation + ")");
+	}
+
+	public static void ModifyAttributeClass(WebDriver driver, String element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementsByClassName('.vjs-user-inactive')[0].classList.remove('.vjs-user-inactive');");
 	}
 
 	// KRHelper.Convert(expandCalendar().getAttributeValue("value"));
