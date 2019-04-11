@@ -26,10 +26,13 @@ public class ResultSearchTests extends BaseTest {
 		LOGGER.info(String.format("2. Enter %s into destination box", TestConstants.TestData.WORDSEARCH));
 		GooglePage.enterWordAndSearch(TestConstants.TestData.WORDSEARCH);
 
+		LOGGER.info("Click Search and expect  Search Results in Result page");
+		GooglePage.SearchEnterButton();
+		//Assert.assertTrue(searchResultsPage.getSearchResultsSummaryText().contains("concuerdan con tu búsqueda"));
 
 
 		/*
-		LOGGER.info("Click Search and expect to land at Search Results page");
+
 		searchResultsPage = landingPage.tapSearchButton();
 
 		Assert.assertTrue(searchResultsPage.getSearchResultsSummaryText().contains("concuerdan con tu búsqueda"));

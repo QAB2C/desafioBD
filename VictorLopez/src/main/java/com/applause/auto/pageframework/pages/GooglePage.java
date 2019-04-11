@@ -2,9 +2,12 @@ package com.applause.auto.pageframework.pages;
 
 import com.applause.auto.framework.pageframework.util.logger.LogController;
 import com.applause.auto.framework.pageframework.web.AbstractPage;
+import com.applause.auto.framework.pageframework.web.PageFactory;
 import com.applause.auto.framework.pageframework.web.WebElementLocator;
 import com.applause.auto.framework.pageframework.web.factory.WebDesktopImplementation;
+import com.applause.auto.framework.pageframework.webcontrols.Button;
 import com.applause.auto.framework.pageframework.webcontrols.EditField;
+import com.applause.auto.framework.pageframework.webcontrols.Link;
 
 import java.lang.invoke.MethodHandles;
 @WebDesktopImplementation(DesktopGooglePage.class)
@@ -35,10 +38,25 @@ public abstract class GooglePage extends AbstractPage {
         getResultsTextBox().click();
     }
 
-    @WebElementLocator(webDesktop = ".gLFyf gsfi")
+    // buscar pagina public StatusBlockingsPage LogingEnterButton () {
+        public void SearchEnterButton () {
+        getSearchButton().click();
+        LOGGER.info("Tap on Word Search Button");
+        //return PageFactory.create(StatusBlockingsPage.class);
+    }
+
+    @WebElementLocator(webDesktop = ".gLFyf")
     protected EditField getResultsTextBox() {
         return new EditField(this, getLocator(this, "getResultsTextBox"));
     }
+
+
+    @WebElementLocator(webDesktop = " input[name='btnK']")
+    protected Button getSearchButton() {
+        return new Button(this, getLocator(this, "getSearchButton"));
+    }
+
+
 
 }
 
