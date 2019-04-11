@@ -31,7 +31,7 @@ public class GoogleSearchPage extends AbstractPage {
 	 */
 
 	/**
-	 * Enter a string destination city and then select the first result fron the dropdown once it appears
+	 * Enter a string Search *
 	 * 
 	 * @param search
 	 */
