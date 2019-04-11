@@ -7,9 +7,9 @@ import com.applause.auto.framework.pageframework.web.WebElementLocator;
 import com.applause.auto.framework.pageframework.web.factory.WebDesktopImplementation;
 import com.applause.auto.framework.pageframework.webcontrols.Button;
 import com.applause.auto.framework.pageframework.webcontrols.EditField;
-import com.applause.auto.framework.pageframework.webcontrols.Link;
 
 import java.lang.invoke.MethodHandles;
+
 @WebDesktopImplementation(DesktopGooglePage.class)
 public abstract class GooglePage extends AbstractPage {
 
@@ -17,8 +17,7 @@ public abstract class GooglePage extends AbstractPage {
 
     @Override
     protected void waitUntilVisible() {
-        //dismissPopup();
-        //syncHelper.waitForElementToAppear(getDestinationTextBox());
+
     }
 
     /*
@@ -27,8 +26,6 @@ public abstract class GooglePage extends AbstractPage {
 
     /**
      * Enter a string EditField and click Search
-     *
-     *
      */
 
 
@@ -38,12 +35,19 @@ public abstract class GooglePage extends AbstractPage {
         getResultsTextBox().click();
     }
 
-    // buscar pagina public StatusBlockingsPage LogingEnterButton () {
-        public void SearchEnterButton () {
+
+    public Boolean SearchEnterButton() {
         getSearchButton().click();
         LOGGER.info("Tap on Word Search Button");
-        //return PageFactory.create(StatusBlockingsPage.class);
+        return true;
     }
+
+    public SearchGoogleResultsPage ResultsSearchButton() {
+        getSearchResultButton().click();
+        LOGGER.info("Search Button");
+        return PageFactory.create(SearchGoogleResultsPage.class);
+    }
+
 
     @WebElementLocator(webDesktop = ".gLFyf")
     protected EditField getResultsTextBox() {
@@ -56,6 +60,10 @@ public abstract class GooglePage extends AbstractPage {
         return new Button(this, getLocator(this, "getSearchButton"));
     }
 
+    @WebElementLocator(webDesktop = " input[name='btnK']")
+    protected Button getSearchResultButton() {
+        return new Button(this, getLocator(this, "getSearchResultButton"));
+    }
 
 
 }
