@@ -1,13 +1,11 @@
 package com.applause.auto.pageframework.Chunks;
 
 import com.applause.auto.framework.pageframework.web.AbstractPage;
-import com.applause.auto.framework.pageframework.web.PageFactory;
 import com.applause.auto.framework.pageframework.web.WebElementLocator;
 import com.applause.auto.framework.pageframework.web.factory.WebDesktopImplementation;
 import com.applause.auto.framework.pageframework.web.factory.WebPhoneImplementation;
 import com.applause.auto.framework.pageframework.web.factory.WebTabletImplementation;
-import com.applause.auto.framework.pageframework.webcontrols.Button;
-import com.applause.auto.pageframework.pages.UsersCatalogPage;
+import com.applause.auto.framework.pageframework.webcontrols.Text;
 
 @WebDesktopImplementation(DesktopAccountChunk.class)
 @WebTabletImplementation(TabletAccountChunk.class)
@@ -17,7 +15,7 @@ public class AccountChunk extends AbstractPage {
 	@Override
 	protected void waitUntilVisible() {
 
-		syncHelper.waitForElementToAppear(getNavigateToUsersCatalog());
+		syncHelper.waitForElementToAppear(getUsername());
 	}
 
 	/*
@@ -25,20 +23,21 @@ public class AccountChunk extends AbstractPage {
 	 */
 
 	/**
-	 * Navigate to NavigateToUsers
+	 * Get Text of userName
+	 * 
+	 * @return Username text
 	 */
-	public UsersCatalogPage navigateToUsersCatalog() {
+	public String getUsernameText() {
 
-		getNavigateToUsersCatalog().click();
-		return PageFactory.create(UsersCatalogPage.class);
+		return getUsername().getText();
 	}
 
 	/*
 	 * Protected Getters
 	 */
-	@WebElementLocator(webDesktop = "//a[@href='#accountUsersCatalog']")
-	protected Button getNavigateToUsersCatalog() {
-		return new Button(this, getLocator(this, "getNavigateToUsersCatalog"));
+	@WebElementLocator(webDesktop = "div > h2", webTablet = "div > h2", webMobile = "div > h2")
+	protected Text getUsername() {
+		return new Text(this, getLocator(this, "getUsername"));
 	}
 }
 

@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.applause</groupId>
-	<artifactId>bd-web.kaleido</artifactId>
+	<artifactId>simulacro_ws</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>bd-web.auto</name>
+	<name>simulacro_ws</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<com.applause.version>1.8.10</com.applause.version>

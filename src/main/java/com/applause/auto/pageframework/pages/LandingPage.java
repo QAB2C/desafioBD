@@ -2,8 +2,7 @@ package com.applause.auto.pageframework.pages;
 
 import java.lang.invoke.MethodHandles;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.NoSuchElementException;
 
 import com.applause.auto.framework.pageframework.util.logger.LogController;
 import com.applause.auto.framework.pageframework.web.AbstractPage;
@@ -13,7 +12,9 @@ import com.applause.auto.framework.pageframework.web.factory.WebDesktopImplement
 import com.applause.auto.framework.pageframework.web.factory.WebPhoneImplementation;
 import com.applause.auto.framework.pageframework.web.factory.WebTabletImplementation;
 import com.applause.auto.framework.pageframework.webcontrols.Button;
-import com.applause.auto.pageframework.Chunks.AccountChunk;
+import com.applause.auto.framework.pageframework.webcontrols.EditField;
+import com.applause.auto.framework.pageframework.webcontrols.Link;
+import com.applause.auto.framework.pageframework.webcontrols.Text;
 
 @WebDesktopImplementation(DesktopLandingPage.class)
 @WebTabletImplementation(TabletLandingPage.class)
@@ -24,7 +25,8 @@ public abstract class LandingPage extends AbstractPage {
 
 	@Override
 	protected void waitUntilVisible() {
-		syncHelper.waitForElementToAppear(getIngresarButton());
+
+		syncHelper.waitForElementToAppear(getSearchedWordTextBox());
 	}
 
 	/*
@@ -32,62 +34,43 @@ public abstract class LandingPage extends AbstractPage {
 	 */
 
 	/**
-	 * Enter a string destination city and then select the first result fron the dropdown once it appears
+	 * Enter a string destination city and then select the first result fron the
+	 * dropdown once it appears
 	 * 
-	 * @param destinationName
-	 */
-	public void loginLandingPage(String user, String password) {
-
-		LOGGER.info("2.1 Navigate to login page.");
-		getIngresarButton().click();
-
-		LOGGER.info("2.2 the user's data is filled in for the login.");
-		getUserTextBox().sendKeys(user);
-		getPasswordTextBox().sendKeys(password);
-		getLoginIngresarButton().click();
-
-	}
-
-	public AccountChunk navigateToUserProfile() {
-
-		getAccountButton().click();
-		return PageFactory.create(AccountChunk.class);
-	}
-
-	/**
-	 * Taps the search button and expects to land at Search Results Page
-	 * 
+	 * @param searched text
 	 * @return a SearchResultsPage
 	 */
+	public SearchResultsPage searchText(String text) {
+
+		getSearchedWordTextBox().setText(text);
+		getAjaxResult().click();
+		LOGGER.info("Tap on Search Button");
+		return PageFactory.create(SearchResultsPage.class);
+	}
 
 	/*
 	 * Protected Getters
 	 */
 
-	@WebElementLocator(webDesktop = ".btn-login")
-	protected Button getIngresarButton() {
-		return new Button(this, getLocator(this, "getIngresarButton"));
+	@WebElementLocator(webDesktop = "[name=q]")
+	protected EditField getSearchedWordTextBox() {
+
+		return new EditField(this, getLocator(this, "getSearchedWordTextBox"));
 	}
 
-	@WebElementLocator(webDesktop = "UserName")
-	protected WebElement getUserTextBox() {
-		return getDriver().findElement(By.name(getLocator(this, "getUserTextBox")));
+	@WebElementLocator(webDesktop = "[jsname='erkvQe']")
+	protected Link getAjaxResult() {
+
+		return new Link(this, getLocator(this, "getAjaxResult"));
 	}
 
-	@WebElementLocator(webDesktop = "Password")
-	protected WebElement getPasswordTextBox() {
-		return getDriver().findElement(By.name(getLocator(this, "getPasswordTextBox")));
+
+	@WebElementLocator(webDesktop = "#tsf input[type=text]")
+	protected Button getSearchButton() {
+		return new Button(this, getLocator(this, "getSearchButton"));
 	}
 
-	@WebElementLocator(webDesktop = "#loginButton")
-	protected Button getLoginIngresarButton() {
-		return new Button(this, getLocator(this, "getLoginIngresarButton"));
-	}
 
-	@WebElementLocator(webDesktop = "//li[@class='submenu-link1 hidden-xs is-user-profile-link']/a")
-	protected Button getAccountButton() {
-		return new Button(this, getLocator(this, "getAccountButton"));
-	}
 	/*
 	 * Private Helpers
 	 */

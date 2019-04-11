@@ -16,7 +16,7 @@ import com.applause.auto.framework.pageframework.util.queryhelpers.WebElementQue
 import com.applause.auto.framework.pageframework.util.synchronization.WebSyncHelper;
 import com.applause.auto.framework.pageframework.web.PageFactory;
 import com.applause.auto.framework.test.listeners.TestListener;
-import com.applause.auto.pageframework.helpers.BDTravelTestHelper;
+import com.applause.auto.pageframework.helpers.BestDayTestHelper;
 import com.applause.auto.pageframework.pages.LandingPage;
 import com.applause.auto.pageframework.testdata.CustomerConfig;
 import com.applause.auto.pageframework.testdata.TestConstants.TestData;
@@ -34,7 +34,7 @@ public class BaseTest {
 	protected static WebSyncHelper syncHelper;
 	protected static WebElementQueryHelper queryHelper;
 	protected static EnvironmentUtil env;
-	protected BDTravelTestHelper templateTestHelper;
+	protected BestDayTestHelper templateTestHelper;
 
 	static {
 		config = new CustomerConfig();
@@ -57,7 +57,7 @@ public class BaseTest {
 		syncHelper = (WebSyncHelper) driverWrapper.getSyncHelper();
 		queryHelper = (WebElementQueryHelper) driverWrapper.getQueryHelper();
 
-		templateTestHelper = new BDTravelTestHelper();
+		templateTestHelper = new BestDayTestHelper();
 
 		// Maximize the browser for desktop platforms
 		if (!env.getIsMobileWebTest()) {
