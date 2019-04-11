@@ -21,9 +21,9 @@ public class ExamenSimulacroTest extends BaseTest {
 
 		LOGGER.info(String.format("2. Palabra a buscar %s", TestConstants.TestData.Busqueda));
 		landingPage.IngresoBusqueda(TestConstants.TestData.Busqueda);
-		landingPage.tapSearchButton();
 
-		LOGGER.info(String.format("3. Si llega hasta aqui"));
+		ResultadosGoogle = landingPage.tapSearchButton();
+
 		// Assertions
 		Assert.assertEquals(ResultadosGoogle.ListHotels(), true);
 

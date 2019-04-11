@@ -64,10 +64,6 @@ public abstract class PagePrincipalGoogle extends AbstractPage {
 		return new Button(this, getLocator(this, "getbuscar"));
 	}
 
-	/*
-	 * Private Helpers
-	 */
-
 }
 
 /**

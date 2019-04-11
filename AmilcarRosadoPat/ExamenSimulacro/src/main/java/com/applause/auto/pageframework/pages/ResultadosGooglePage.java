@@ -32,8 +32,7 @@ public class ResultadosGooglePage extends AbstractPage {
 
 		boolean Lista = true;
 
-		System.out.println(Busqueda());
-		if (Busqueda().contains("amilcar antonio rosado pat - Senior QA Tester - Best / Day | LinkedIn")) {
+		if (Busqueda() == " ") {
 			Lista = false;
 		}
 		return Lista;
@@ -46,7 +45,6 @@ public class ResultadosGooglePage extends AbstractPage {
 	 * @return the text from the search results summary
 	 */
 	public String Busqueda() {
-
 		return getResultadoBusqueda().getText();
 	}
 
