@@ -23,20 +23,20 @@ public abstract class GooglePage extends AbstractPage {
      */
 
     /**
-     * Enter a string destination city and then select the first result fron the
-     * dropdown once it appears
+     * Enter a string EditField and click Search
      *
-     * @param destinationName
+     *
      */
+
+
     public void enterWordAndSearch(String word) {
-        LOGGER.info(String.format("Entering destination %s into search field", word));
+        LOGGER.info(String.format("Entering user %s into search field", word));
         getResultsTextBox().setText(word);
-        //syncHelper.waitForElementToAppear(getDropdownItem());
-        //getDropdownItem().click();
+        getResultsTextBox().click();
     }
 
-    @WebElementLocator(webDesktop = "#gLFyf gsfi")
-    protected EditField enterWordAndSearch() {
+    @WebElementLocator(webDesktop = ".gLFyf gsfi")
+    protected EditField getResultsTextBox() {
         return new EditField(this, getLocator(this, "getResultsTextBox"));
     }
 

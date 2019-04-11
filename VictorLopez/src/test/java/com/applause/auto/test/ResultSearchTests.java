@@ -17,14 +17,16 @@ public class ResultSearchTests extends BaseTest {
 	@Test(groups = { TestNGGroups.HOTEL_SEARCH }, description = "9483")
 	public void testSearchForCancunHotel() {
 
-		LOGGER.info("1. Navigate to Google page");
+		LOGGER.info("1. Navigate to Google Home page");
         GooglePage = navigateToGooglePage();
 
 		// Assertions
-		Assert.assertNotNull(GooglePage, "Failed to navigate to the Google page.");
+		Assert.assertNotNull(GooglePage, "Failed to navigate to the Google Home page.");
 
 		LOGGER.info(String.format("2. Enter %s into destination box", TestConstants.TestData.WORDSEARCH));
-		GooglePage.enterDestinationAndConfirm(TestConstants.TestData.WORDSEARCH);
+		GooglePage.enterWordAndSearch(TestConstants.TestData.WORDSEARCH);
+
+
 
 		/*
 		LOGGER.info("Click Search and expect to land at Search Results page");
